@@ -1,0 +1,43 @@
+import fs from "node:fs";
+import path from "node:path";
+const specs=[...JSON.parse(fs.readFileSync("data/consumer-spec-a.json","utf8")),...JSON.parse(fs.readFileSync("data/consumer-spec-b.json","utf8"))];
+const base="https://prepaid1215.github.io/test-post/";
+const errors=[];let checked=0;
+const titles=new Set(),canonicalSet=new Set();
+for(const s of specs){
+ const file=path.join("site",s.path,"index.html");
+ if(!fs.existsSync(file)){errors.push(file+" missing");continue;}
+ const html=fs.readFileSync(file,"utf8"),h1=(html.match(/<h1\b/g)||[]).length;
+ if(h1!==1)errors.push(file+" has "+h1+" H1 headings");
+ const title=html.match(/<title>(.*?)<\/title>/)?.[1]||"";
+ if(titles.has(title))errors.push(file+" duplicate title");titles.add(title);
+ const canonical=html.match(/rel="canonical" href="([^"]+)"/)?.[1]||"";
+ if(canonical!==base+s.path.replace(/^\/+/,""))errors.push(file+" wrong canonical");
+ if(canonicalSet.has(canonical))errors.push(file+" duplicate canonical");canonicalSet.add(canonical);
+ const css=html.match(/<link rel="stylesheet"[^>]*>/g)||[];
+ if(css.length!==1||!css[0].includes("catalog.css"))errors.push(file+" not a single catalog stylesheet");
+ for(const marker of ['class="catalog"','class="plan-item"','id="plan-list"','id="catalog-filters"','class="faq-section"','id="plan-search"','id="compare-tray"']){
+  if(!html.includes(marker))errors.push(file+" missing "+marker);
+ }
+ if(/preplan\.site|59man\.shop|편의점선불유심\.com|선불폰 셀프개통/.test(html))errors.push(file+" prepaid business crossover");
+ const urls=[...html.matchAll(/\b(?:href|src)="([^"]+)"/g)].map(m=>m[1]);
+ for(const u of urls){
+  if(u[0]==="#"){
+    if(u.length>1&&!html.includes('id="'+u.substring(1)+'"'))errors.push(file+" unresolved anchor "+u);
+    continue;
+  }
+  if(/^(https?:|mailto:|tel:|data:)/i.test(u))continue;
+  if(u.startsWith("/")){errors.push(file+" root-absolute asset "+u);continue;}
+  const clean=u.split(/[?#]/)[0];
+  const target0=path.resolve(path.dirname(file),decodeURIComponent(clean));
+  const target=path.extname(target0)?target0:path.join(target0,"index.html");
+  checked++;
+  if(!target.startsWith(path.resolve("site")+path.sep)||!fs.existsSync(target))errors.push(file+" missing local path "+u);
+ }
+}
+const sitemap=fs.readFileSync("site/sitemap.xml","utf8");
+const locs=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(x=>x[1]);
+if(locs.length!==19||new Set(locs).size!==19)errors.push("sitemap count != 19");
+if(!fs.existsSync("site/assets/catalog.js")||!fs.existsSync("site/assets/catalog.css"))errors.push("assets missing");
+if(errors.length){console.error(errors.slice(0,40).join("\n"));throw Error(errors.length+" catalog QA errors");}
+console.log("CATALOG QA PASS: 19 pages; "+checked+" internal paths; unique canonical & title; 1 CSS; filters, comparison and mobile navigation present.");

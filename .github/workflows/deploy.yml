@@ -1,4 +1,4 @@
-name: Publish mobile-plan storefront
+name: Publish real-plan comparison catalog
 on:
   push:
     branches: [main]
@@ -20,10 +20,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - name: Generate all 19 storefront pages
-        run: node scripts/build-storefront-v2.mjs
-      - name: Validate layout structure SEO and internal links
-        run: node scripts/validate-storefront-v2.mjs
+      - name: Render 19 search pages with real plan lists
+        run: node scripts/build-catalog.mjs
+      - name: Check site structure and links
+        run: node scripts/validate-catalog.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
