@@ -47,5 +47,5 @@ for(const spec of specs){
  fs.writeFileSync(file,html);
  count++;
 }
-if(count!==5)throw Error("Expected 5 pages, generated "+count);
+if(count!==19)throw Error("Expected 19 pages, generated "+count);
 console.log("Enhanced "+count+" priority postpaid pages; added the homepage plan finder.");

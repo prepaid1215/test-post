@@ -37,7 +37,7 @@ for(const s of specs){
   if(!resolved.startsWith(path.resolve("site")+path.sep))E(file,"link escapes site root: "+u);
   else if(!fs.existsSync(resolved))E(file,"broken relative link: "+u+" -> "+resolved);
  }
- const advanced=["/","/price/under-20000/","/unlimited/","/data/15gb/","/number-transfer/"].includes(s.path);
+ const advanced=true;
  if(advanced&&!html.includes('id="consumer-guide"'))E(file,"priority guide missing");
  if(s.path==="/"&&!html.includes('id="postpaid-finder-form"'))E(file,"plan finder missing");
 }
