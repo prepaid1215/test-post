@@ -63,6 +63,10 @@ jobs:
           node --check scripts/register-segment-landings.mjs
           node --check site/assets/segment-landings.js
           node scripts/register-segment-landings.mjs
+      - name: Validate premium work-phone UI and plan data
+        run: |
+          node --check scripts/validate-work-phone.mjs
+          node scripts/validate-work-phone.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

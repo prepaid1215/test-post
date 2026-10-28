@@ -1,0 +1,28 @@
+import fs from "node:fs";
+import vm from "node:vm";
+const html=fs.readFileSync("site/switch/work-phone/index.html","utf8");
+const base="https://prepaid1215.github.io/test-post/switch/work-phone/";
+function verify(condition,message){if(!condition)throw Error(message);}
+verify((html.match(/<h1\b/g)||[]).length===1,"Expected exactly one heading H1");
+verify(html.includes('rel="canonical" href="'+base+'"'),"Wrong canonical");
+verify(html.includes('name="viewport"'),"Missing viewport");
+verify(html.includes('id="plans"')&&html.includes('id="how"')&&html.includes('id="faq"'),"Missing sections");
+verify(html.includes('id="plan-backdrop"')&&html.includes('id="official-link"'),"Missing plan selection handoff");
+verify(html.includes("https://www.n-telecom.co.kr/59man/view/main/main.aspx"),"Official signup link missing");
+verify(html.includes("https://pf.kakao.com/_akxmKn/chat"),"Kakao consultation link missing");
+verify(!html.includes("25,900원")&&!html.includes("36,900원"),"Unverified prices from visual mockup");
+verify(html.includes("17,900원")&&html.includes("23,500원")&&html.includes("36,700원"),"Expected verified plans not found");
+verify(html.includes("가입 페이지에서 다시 선택"),"Plan handoff warning missing");
+verify(html.includes('class="mobile-bar"'),"Mobile CTA not found");
+verify(html.includes('aria-modal="true"')&&html.includes('aria-labelledby="dialog-title"'),"Modal a11y missing");
+const scripts=[...html.matchAll(/<script(?:\s[^>]*?)?>([\s\S]*?)<\/script>/g)];
+verify(scripts.length>=2,"Scripts missing");
+const inline=scripts[scripts.length-1][1];
+new vm.Script(inline,{filename:"work-phone-inline.js"});
+const jsonLd=scripts.find(x=>x[0].includes("application/ld+json"));
+verify(!!jsonLd,"JSON-LD missing");
+JSON.parse(jsonLd[1]);
+const css=html.match(/<style>([\s\S]*?)<\/style>/);
+verify(!!css,"CSS missing");
+for(const slug of ["delivery-rider","quick-service","designated-driver"])verify(fs.existsSync("site/switch/"+slug+"/index.html"),"Missing related page: "+slug);
+console.log("Premium work-phone landing QA PASS: canonical, source prices, JS parse, JSON-LD, CTAs, responsive, related links");
