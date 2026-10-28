@@ -20,8 +20,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - name: Generate search-intent pages
+      - name: Generate 19 postpaid pages
         run: node scripts/build-consumer-pages.mjs
+      - name: Add detailed content and plan finder
+        run: node scripts/enhance-postpaid-pages.mjs
+      - name: Validate on-page SEO and internal links
+        run: node scripts/validate-postpaid-site.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
