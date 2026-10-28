@@ -1,0 +1,312 @@
+[
+  {
+    "url": "/",
+    "primary_keyword": "알뜰폰 요금제 비교",
+    "variants": [
+      "알뜰폰 요금제",
+      "알뜰폰 요금제 비교",
+      "알뜰폰 추천"
+    ],
+    "intent": "종합 비교·가입",
+    "priority": "P0",
+    "consumer_goal": "통신비를 줄이고 싶지만 어떤 요금제부터 비교해야 할지 모르는 사람",
+    "next_action": "요금제 찾기 시작 / 후불 가입",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/plans/",
+    "primary_keyword": "알뜰폰 요금제 추천",
+    "variants": [
+      "알뜰폰 요금제 추천",
+      "알뜰폰 요금제 고르는 법"
+    ],
+    "intent": "사용량 기반 선택",
+    "priority": "P1",
+    "consumer_goal": "요금제 추천 목록이 많아서 자신에게 맞는 상품을 결정하기 어려운 사람",
+    "next_action": "조건에 맞는 상품으로 이동",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/price/under-20000/",
+    "primary_keyword": "알뜰폰 1만원대",
+    "variants": [
+      "알뜰폰 1만원대",
+      "만원대 알뜰폰",
+      "2만원 미만 알뜰폰"
+    ],
+    "intent": "예산 제한",
+    "priority": "P0",
+    "consumer_goal": "통신비를 카드 할인 전 월 20,000원 미만으로 제한하려는 사람",
+    "next_action": "해당 상품 확인·가입",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/price/20000-range/",
+    "primary_keyword": "알뜰폰 2만원대",
+    "variants": [
+      "알뜰폰 2만원대",
+      "2만원대 알뜰폰 요금제"
+    ],
+    "intent": "가격·데이터 절충",
+    "priority": "P1",
+    "consumer_goal": "월 2만원대 예산으로 데이터 10GB 이상을 원하는 사람",
+    "next_action": "해당 상품 확인·가입",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/price/under-30000/",
+    "primary_keyword": "알뜰폰 3만원 이하",
+    "variants": [
+      "알뜰폰 3만원 이하",
+      "3만원 미만 알뜰폰"
+    ],
+    "intent": "상한 예산",
+    "priority": "P2",
+    "consumer_goal": "월 통신비 상한 3만원을 정했지만 데이터 사용량도 놓치고 싶지 않은 사람",
+    "next_action": "가격대 선택",
+    "consolidation_note": "2만원대와 중복 소지; 실측 전 통합 보류",
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/unlimited/",
+    "primary_keyword": "알뜰폰 데이터 무제한",
+    "variants": [
+      "알뜰폰 무제한",
+      "알뜰폰 데이터 무제한",
+      "알뜰폰 속도제한 무제한"
+    ],
+    "intent": "소진 후 이용",
+    "priority": "P0",
+    "consumer_goal": "데이터를 다 쓴 뒤에도 인터넷 사용이 끊기는지 걱정하는 사람",
+    "next_action": "사용량 필터 → 상품 선택",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/data/7gb/",
+    "primary_keyword": "알뜰폰 7GB 요금제",
+    "variants": [
+      "알뜰폰 7GB",
+      "7기가 알뜰폰"
+    ],
+    "intent": "소량 데이터",
+    "priority": "P1",
+    "consumer_goal": "와이파이를 주로 쓰고 밖에서는 가볍게 데이터를 쓰는 사람",
+    "next_action": "7GB 상품 보기",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/data/10gb/",
+    "primary_keyword": "알뜰폰 10GB 요금제",
+    "variants": [
+      "알뜰폰 10GB",
+      "10기가 알뜰폰"
+    ],
+    "intent": "중간 데이터",
+    "priority": "P1",
+    "consumer_goal": "7GB는 부족하지만 15GB 이상은 필요하지 않은 사람",
+    "next_action": "10GB 상품 보기",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/data/15gb/",
+    "primary_keyword": "알뜰폰 15GB 요금제",
+    "variants": [
+      "알뜰폰 15GB",
+      "15기가 알뜰폰",
+      "15GB 3Mbps"
+    ],
+    "intent": "데이터·통화·속도 비교",
+    "priority": "P0",
+    "consumer_goal": "영상·지도 사용량이 중간 이상이며 통화 조건도 중요한 사람",
+    "next_action": "15GB 상품 보기",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/data/11gb-daily2gb/",
+    "primary_keyword": "알뜰폰 11GB 매일 2GB",
+    "variants": [
+      "알뜰폰 11GB 매일 2GB",
+      "11기가 일2기가 알뜰폰"
+    ],
+    "intent": "매일 데이터",
+    "priority": "P1",
+    "consumer_goal": "하루하루 외부에서 데이터를 꾸준히 쓰는 사람",
+    "next_action": "11GB+일2GB 보기",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/data/100gb/",
+    "primary_keyword": "알뜰폰 100GB 요금제",
+    "variants": [
+      "알뜰폰 100GB",
+      "100기가 알뜰폰"
+    ],
+    "intent": "대용량 데이터",
+    "priority": "P1",
+    "consumer_goal": "외부에서 동영상·앱 다운로드·대용량 데이터를 자주 사용하는 사람",
+    "next_action": "100GB 상품 보기",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/speed/3mbps/",
+    "primary_keyword": "알뜰폰 3Mbps",
+    "variants": [
+      "알뜰폰 3Mbps",
+      "3Mbps 속도 알뜰폰"
+    ],
+    "intent": "소진 후 체감속도",
+    "priority": "P1",
+    "consumer_goal": "데이터 소진 뒤에도 검색·지도·일반 영상 등을 쓰려는 사람",
+    "next_action": "3Mbps 요금제 선택",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/number-transfer/",
+    "primary_keyword": "알뜰폰 번호이동 방법",
+    "variants": [
+      "알뜰폰 번호이동",
+      "번호 그대로 알뜰폰",
+      "알뜰폰 번호이동 방법"
+    ],
+    "intent": "번호 유지",
+    "priority": "P0",
+    "consumer_goal": "전화번호는 유지하면서 월 통신요금만 낮추려는 사람",
+    "next_action": "번호이동 후불 신청",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/sim-only/",
+    "primary_keyword": "유심만 바꾸면 알뜰폰",
+    "variants": [
+      "알뜰폰 유심만 교체",
+      "기존폰 알뜰폰 유심"
+    ],
+    "intent": "기기 유지",
+    "priority": "P1",
+    "consumer_goal": "휴대폰 기기를 새로 사지 않고 통신비만 줄이려는 사람",
+    "next_action": "호환 확인 → 후불 가입",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/self-phone/",
+    "primary_keyword": "자급제폰 알뜰폰 요금제",
+    "variants": [
+      "자급제폰 알뜰폰",
+      "아이폰 알뜰폰 요금제",
+      "갤럭시 알뜰폰"
+    ],
+    "intent": "자급제 단말",
+    "priority": "P1",
+    "consumer_goal": "이미 자급제 아이폰·갤럭시를 가지고 있고 별도 요금제만 필요한 사람",
+    "next_action": "호환 확인 → 후불 가입",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/new-number/",
+    "primary_keyword": "알뜰폰 신규가입 방법",
+    "variants": [
+      "알뜰폰 신규가입",
+      "알뜰폰 새 회선"
+    ],
+    "intent": "추가 회선",
+    "priority": "P1",
+    "consumer_goal": "업무·생활용으로 추가 회선을 만들거나 별도 후불 회선이 필요한 사람",
+    "next_action": "후불 신규가입",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/benefits/",
+    "primary_keyword": "알뜰폰 가입 혜택",
+    "variants": [
+      "알뜰폰 가입혜택",
+      "알뜰폰 요금제 혜택"
+    ],
+    "intent": "상품권·할인 확인",
+    "priority": "P1",
+    "consumer_goal": "비슷한 기본료에서 실제로 이용할 제휴혜택을 고르고 싶은 사람",
+    "next_action": "혜택 조건 확인 → 가입",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/benefits/naverpay/",
+    "primary_keyword": "네이버페이 알뜰폰",
+    "variants": [
+      "네이버페이 알뜰폰",
+      "네이버페이 포인트 요금제"
+    ],
+    "intent": "제휴포인트",
+    "priority": "P2",
+    "consumer_goal": "네이버페이 포인트를 자주 쓰면서 알뜰폰 요금제도 함께 알아보는 사람",
+    "next_action": "조건 확인 → 후불 가입",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  },
+  {
+    "url": "/benefits/coupang/",
+    "primary_keyword": "쿠팡 알뜰폰 혜택",
+    "variants": [
+      "쿠팡 알뜰폰 혜택",
+      "쿠팡캐시 알뜰폰"
+    ],
+    "intent": "쿠팡 제휴",
+    "priority": "P2",
+    "consumer_goal": "쿠팡·쿠팡이츠를 자주 이용하고 통신요금제 혜택을 함께 챙기려는 사람",
+    "next_action": "조건 확인 → 후불 가입",
+    "consolidation_note": null,
+    "postpaid_only": true,
+    "actual_ranking": "unverified",
+    "source_type": "research_hypothesis"
+  }
+]
