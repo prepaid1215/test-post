@@ -1,0 +1,43 @@
+
+/* Additional styling for five affinity and three second-line landings */
+.segment-hero[data-audience="work"],body[data-audience="work"] .hero{background:linear-gradient(130deg,#122c43 0%,#163f65 68%,#215b7d 100%)}
+body[data-segment="coupang-cash"] .hero{background:linear-gradient(130deg,#172e55 0%,#1c4d8a 100%)}
+body[data-segment="naverpay"] .hero{background:linear-gradient(130deg,#143e50 0%,#1c6675 100%)}
+body[data-segment="oliveyoung"] .hero{background:linear-gradient(130deg,#292d4f 0%,#534777 100%)}
+body[data-segment="cu"] .hero{background:linear-gradient(130deg,#153662 0%,#28578e 100%)}
+.segment-widget{background:#eef4ff;padding:24px 22px;border-radius:15px;margin-bottom:21px;color:#173557}
+.segment-widget h3{font-size:1.08rem;margin:0 0 10px;letter-spacing:-.04em}
+.segment-widget>p{font-size:.87rem;line-height:1.75;color:#5a7392;margin:0 0 19px}
+.segment-widget small{font-size:.76rem;line-height:1.65;color:#5a7392;display:block;margin-top:12px}
+.segment-widget label{font-size:.84rem;font-weight:750;display:block;line-height:1.55}
+.segment-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.segment-form input,.segment-form select,.segment-widget>.money-input input,.segment-widget>label>.money-input input{width:100%;display:block;min-height:47px;margin-top:7px;border-radius:9px;border:1px solid #cadaed;padding:10px 13px;background:#fff;color:#19334e;outline-offset:2px}
+.segment-metric{background:#fff;padding:17px 18px;border-radius:11px;margin-top:15px}
+.segment-metric>span{display:block;font-size:.77rem;color:#607d9e;font-weight:650}
+.segment-metric>strong{font-size:clamp(1.25rem,3vw,1.6rem);letter-spacing:-.05em;color:#215ab7;display:block;line-height:1.5;margin-top:5px}
+.segment-plans{display:flex;flex-direction:column;gap:10px}
+.segment-plan{display:block;cursor:pointer}
+.segment-plan input{position:absolute;width:1px;height:1px;opacity:0}
+.segment-plan-body{display:block;padding:15px 19px;background:#fff;border-radius:12px;border:1.5px solid #dce5ef}
+.segment-plan-body b{display:block;font-size:.91rem;letter-spacing:-.02em}
+.segment-plan-body strong{display:block;font-size:1.13rem;letter-spacing:-.03em;color:#1f58b3;line-height:1.6}
+.segment-plan-body small{font-size:.78rem;color:#68819b;line-height:1.65;display:block}
+.segment-plan input:checked+.segment-plan-body{border-color:#3769d8;box-shadow:inset 0 0 0 1px #3769d8;background:#f5f8ff}
+.segment-plan input:focus-visible+.segment-plan-body{outline:3px solid #3b82f6;outline-offset:3px}
+.segment-habit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:13px}
+.segment-habit label{cursor:pointer}
+.segment-habit input{position:absolute;opacity:0;width:1px;height:1px}
+.segment-habit span{display:flex;align-items:center;justify-content:center;text-align:center;border:1px solid #cad9f0;background:#fff;border-radius:9px;padding:12px 5px;min-height:54px;font-size:.81rem;font-weight:750}
+.segment-habit input:checked+span{background:#dfeaff;border:1.5px solid #396bd6;color:#1f55ad}
+.segment-habit input:focus-visible+span{outline:3px solid #3b82f6;outline-offset:2px}
+.segment-advice{margin:13px 0 0;color:#355e92!important;line-height:1.75;font-size:.84rem!important}
+.segment-check{display:flex!important;gap:9px;align-items:center;margin:17px 0 3px}
+.segment-check input{width:18px;height:18px;accent-color:#315dd5}
+.segment-widget [type="number"]{font-variant-numeric:tabular-nums}
+body[data-audience="work"] .segment-widget{background:#edf6f9}
+body[data-audience="work"] .section-label{color:#267798}
+body[data-audience="work"] .segment-plan input:checked+.segment-plan-body{border-color:#2c7799;background:#f0f9fb;box-shadow:inset 0 0 0 1px #2c7799}
+body[data-audience="work"] .decision .button-solid{background:#215f83}
+body[data-audience="work"] .visual-value{color:#1a5c7a}
+body[data-audience="work"] .mobile-cta a{background:#215f83}
+@media(max-width:720px){.segment-widget{padding:18px}.segment-form{grid-template-columns:1fr;gap:13px}.segment-habit{gap:6px}.segment-habit span{padding:8px 5px;font-size:.74rem}.segment-plan-body{padding:13px 15px}.segment-widget h3{font-size:1rem}}
