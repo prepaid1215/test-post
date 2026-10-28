@@ -15,7 +15,10 @@ for(const s of specs){
  if(canonical!==base+s.path.replace(/^\/+/,""))errors.push(file+" wrong canonical");
  if(canonicalSet.has(canonical))errors.push(file+" duplicate canonical");canonicalSet.add(canonical);
  const css=html.match(/<link rel="stylesheet"[^>]*>/g)||[];
- if(css.length!==1||!css[0].includes(s.path==="/"? "home.css":"catalog.css"))errors.push(file+" incorrect stylesheet");
+ const isExperiment=["/price/under-20000/","/number-transfer/","/unlimited/","/benefits/naverpay/"].includes(s.path);
+ if(isExperiment){
+  if(css.length!==2||!css[0].includes("catalog.css")||!css[1].includes("experiment-landings.css"))errors.push(file+" incorrect experiment CSS");
+ }else if(css.length!==1||!css[0].includes(s.path==="/"? "home.css":"catalog.css"))errors.push(file+" incorrect stylesheet");
  if(s.path==="/"){
   for(const marker of ['id="situations"','id="stories"','id="compare-cost"','id="current-bill"','id="compare-plan"','id="calculator-target"','id="join-guide"','id="faq"','href="plans/l-7gb/"','href="plans/"','href="data/15gb/"','href="data/100gb/"']){
     if(!html.includes(marker))errors.push(file+" missing home marker "+marker);
@@ -40,6 +43,18 @@ for(const s of specs){
   }
   if((html.match(/id="apply-dialog"/g)||[]).length!==1)errors.push(file+" duplicated enrollment dialog");
   if(!html.includes("conversion.js?v=20261028-8"))errors.push(file+" missing conversion script");
+  if(isExperiment){
+   const expected={"budget":"ntelecom-l-7gb","port":"ntelecom-k-15gb-millie","unlimited":"ntelecom-k-100gb-millie","naverpay":"ntelecom-k-7gb-naverpay"};
+   const landing={"/price/under-20000/":"budget","/number-transfer/":"port","/unlimited/":"unlimited","/benefits/naverpay/":"naverpay"}[s.path];
+   for(const marker of ['data-landing="'+landing+'"','class="conversion-hero experiment-'+landing+'"','id="exp-solve"','class="exp-primary"','id="exp-top"','data-landing-cta="primary"','data-plan="'+expected[landing]+'"','experiment-landings.js?v=20261028-1']){
+     if(!html.includes(marker))errors.push(file+" missing experiment marker "+marker);
+   }
+   if((html.match(/<h1/g)||[]).length!==1)errors.push(file+" duplicated experiment H1");
+   if(landing==="budget"&&!html.includes('id="exp-bill"'))errors.push(file+" missing calculator");
+   if(landing==="port"&&(html.match(/data-port-check/g)||[]).length!==3)errors.push(file+" missing three port checks");
+   if(landing==="unlimited"&&(html.match(/data-speed-pick/g)||[]).length!==3)errors.push(file+" missing three speed choices");
+   if(landing==="naverpay"&&!html.includes("31일차"))errors.push(file+" missing benefit condition");
+  }
  }
  const urls=[...html.matchAll(/\b(?:href|src)="([^"]+)"/g)].map(m=>m[1]);
  for(const u of urls){
@@ -84,6 +99,7 @@ else{
 if(!fs.readFileSync("site/index.html","utf8").includes('href="plans/l-7gb/"'))errors.push("Homepage not linked to L7GB story");
 for(const asset of ["site/assets/product-story.css","site/assets/product-story.js"])if(!fs.existsSync(asset))errors.push(asset+" missing");
 for(const asset of ["site/assets/home.css","site/assets/home.js"])if(!fs.existsSync(asset))errors.push(asset+" missing");
+for(const asset of ["site/assets/experiment-landings.css","site/assets/experiment-landings.js"])if(!fs.existsSync(asset))errors.push(asset+" missing");
 
 
 if(errors.length){console.error(errors.slice(0,40).join("\n"));throw Error(errors.length+" catalog QA errors");}
