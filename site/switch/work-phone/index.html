@@ -48,6 +48,131 @@ footer{background:#f5f8fd;padding:30px 0 42px;border-top:1px solid #e4edf9}.foot
 @media(max-width:760px){.wrap{width:min(100% - 36px,var(--max))}.topbar{min-height:68px}.brand{font-size:21px}.brand-sub{display:none}.nav{display:none}.nav-contact{padding:9px 13px;font-size:11px}.hero{min-height:0}.hero-photo{width:80%;left:20%;height:100%;top:0;opacity:.44}.hero:after{background:linear-gradient(90deg,#06204ad9,#082a5cc1 59%,#092e669e)}.hero-layout{min-height:365px;padding:16px 0}.hero-copy{max-width:100%;padding:17px 0 28px}.hero h1{font-size:clamp(35px,8.3vw,50px)}.hero-lead{font-size:15px;max-width:420px;margin-top:18px}.eyebrow{margin-bottom:17px}.phone{right:1%;top:64px;width:140px;height:250px;opacity:.25;transform:rotate(12deg)}.phone-chip{font-size:10px;left:8px;right:8px}.floating-label,.orb-one,.orb-two{display:none}.value-strip{grid-template-columns:repeat(2,1fr);gap:9px;padding-bottom:28px}.value-strip>div{min-height:66px;border-radius:14px;padding:10px}.value-strip .bubble{width:35px;height:35px;border-radius:11px}.value-strip p{font-size:11px}.value-strip p small{font-size:10px}.sheet{padding-top:36px;border-radius:28px 28px 0 0}.section-head{align-items:start}.section-sub{max-width:240px}.plan-grid{grid-template-columns:1fr;gap:15px}.plan{min-height:auto;padding:22px 22px 18px}.plan-label{top:-10px}.plan h3{font-size:19px}.price{font-size:31px;margin-top:11px}.plan hr{margin:14px 0}.plan button{margin-top:19px}.feature-bar{margin-top:20px}.for-whom{padding:51px 0 22px}.audience-grid{grid-template-columns:1fr}.work-intro{min-height:300px;padding:29px 25px}.tile-stack{grid-template-rows:auto}.tile{min-height:135px}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.how{padding-bottom:48px}.faq{padding-bottom:53px}.cta-panel{padding:28px;align-items:stretch;flex-direction:column}.cta-actions{min-width:0}.bottom{padding-bottom:30px}.mobile-bar{display:flex;position:fixed;z-index:16;left:0;right:0;bottom:0;padding:10px 14px max(10px,env(safe-area-inset-bottom));background:#ffffffeb;backdrop-filter:blur(18px);box-shadow:0 -8px 30px #19366e1f;gap:9px}.mobile-bar .button{padding:12px 8px;flex:1;font-size:13px}.mobile-bar .button-outline{flex:.65}footer{padding-bottom:106px}}
 @media(max-width:480px){.hero-actions{align-items:stretch}.hero-actions .button{width:100%}.hero-hint{width:100%;text-align:center}.hero-copy{padding-bottom:26px}.hero h1{font-size:36px}.plan-grid{gap:17px}.section-head{display:block}.section-sub{text-align:left;margin-top:9px;max-width:none}.section-head h2{font-size:28px}.feature-bar{padding:10px;gap:5px}.feature-item{gap:8px;padding:5px}.feature-item .icon-bg{width:36px;height:36px}.feature-item .ico{width:20px;height:20px}.feature-item p{font-size:11px}.feature-item p small{font-size:10px}.tile{padding:18px 19px}.tile-icon{width:57px;height:57px}.tile-icon .ico{width:28px;height:28px}.tile h3{font-size:17px}.steps{gap:9px}.step{padding:17px 15px;min-height:160px}.cta-panel{padding:25px 21px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* BRIGHT SKY COLORWAY — same structure, same imagery, same text */
+.hero{
+  color:#112e68;
+  background:
+    radial-gradient(ellipse at 76% 8%,rgba(255,255,255,.92) 0%,transparent 37%),
+    radial-gradient(ellipse at 16% 86%,rgba(68,170,255,.33) 0%,transparent 43%),
+    linear-gradient(115deg,#fbfdff 0%,#e9f8ff 35%,#b6eaff 68%,#8bd4ff 100%);
+}
+.hero::after{
+  background:linear-gradient(92deg,rgba(250,254,255,.97) 0%,rgba(241,251,255,.85) 38%,rgba(211,242,255,.33) 66%,rgba(187,234,255,.09) 100%);
+}
+.hero::before{
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);
+  filter:blur(28px);
+}
+.hero-photo{opacity:.95}
+.hero-photo img{
+  opacity:.92;
+  filter:brightness(1.32) contrast(.97) saturate(1.13);
+}
+.hero-photo::after{
+  background:linear-gradient(90deg,rgba(223,247,255,.96) 0%,rgba(202,238,255,.3) 38%,rgba(197,237,255,.02) 78%,rgba(164,221,255,.13) 100%);
+}
+.hero-orb{
+  border-color:rgba(255,255,255,.78);
+  box-shadow:0 0 55px rgba(125,215,255,.52),inset 0 0 45px rgba(255,255,255,.52);
+}
+.hero .brand{color:#123f96}
+.hero .brand-sub{color:#365e97}
+.hero .nav a{color:#17447e}
+.hero .nav a:hover{color:#075bd3}
+.hero .nav-contact{
+  color:#fff;
+  background:linear-gradient(105deg,#1472ed,#0759cf);
+  box-shadow:0 8px 23px rgba(18,110,223,.18);
+}
+.hero .eyebrow{color:#2e619a}
+.hero .eyebrow strong{background:linear-gradient(100deg,#d5f2ff,#c5eaff);color:#1554ad}
+.hero h1{
+  color:#0e2f79;
+  text-shadow:none;
+}
+.hero h1 span{
+  background:linear-gradient(98deg,#135fea 5%,#0b85f6 68%,#128be3);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero-lead{color:#244777}
+.hero-lead strong{color:#084bb6}
+.hero-hint{color:#41679c}
+.hero-actions .button-white{
+  background:linear-gradient(105deg,#186fec,#0758d5);
+  color:#fff;
+  box-shadow:0 12px 28px rgba(26,105,222,.25);
+}
+.value-strip>div{
+  background:rgba(255,255,255,.75);
+  border:1px solid rgba(255,255,255,.94);
+  box-shadow:0 10px 28px rgba(44,123,207,.09);
+  backdrop-filter:blur(14px);
+}
+.value-strip .bubble{
+  background:linear-gradient(145deg,#3c9fff,#1877ec);
+  box-shadow:0 7px 16px rgba(29,124,224,.19);
+}
+.value-strip p{color:#153d7e}
+.value-strip p small{color:#50729c}
+.phone{
+  border-color:#ccefff;
+  box-shadow:0 18px 42px rgba(23,86,177,.3),0 0 22px rgba(255,255,255,.82),inset 0 0 0 2px #1a305e;
+}
+.floating-label{
+  background:rgba(255,255,255,.9);
+  box-shadow:0 12px 30px rgba(39,120,208,.16);
+}
+.sheet{background:#fff}
+.plan.featured{
+  background:
+    radial-gradient(ellipse at 78% -12%,rgba(150,229,255,.68),transparent 55%),
+    linear-gradient(135deg,#1975f6 0%,#105bd1 100%);
+  box-shadow:0 17px 37px rgba(28,108,228,.27);
+}
+.plan.featured .plan-label{
+  background:#0d57ce;
+}
+.feature-bar{background:#f5fbff}
+.work-intro{
+  color:#15386f;
+  background:
+    linear-gradient(112deg,rgba(244,252,255,.98) 3%,rgba(217,241,255,.87) 100%),
+    url("https://images.unsplash.com/photo-1648394794449-5dbe63f6a8b5?auto=format&fit=crop&w=1200&q=75") center/cover;
+  border:1px solid #d9eaff;
+}
+.work-intro .kicker{color:#2369d3!important}
+.work-intro p{color:#365982}
+.work-intro .job-buttons button{
+  border-color:#b4d6ff;
+  background:rgba(255,255,255,.72);
+  color:#1a5bb7;
+}
+.work-intro .job-buttons button[aria-pressed="true"]{
+  background:#1874eb;
+  border-color:#1874eb;
+  color:#fff;
+}
+.work-intro .job-description{color:#284b80;border-left-color:#2b88e9}
+.cta-panel{
+  background:
+    radial-gradient(ellipse at 12% 18%,rgba(167,234,255,.35),transparent 40%),
+    linear-gradient(108deg,#1375ee 0%,#278fe9 50%,#095ac9 100%);
+  box-shadow:0 14px 32px rgba(32,128,220,.13);
+}
+.cta-panel p{color:#edf8ff}
+@media(max-width:760px){
+  .hero::after{
+    background:linear-gradient(90deg,rgba(247,253,255,.94),rgba(227,247,255,.79) 58%,rgba(193,234,255,.58));
+  }
+  .hero-photo{opacity:.67}
+  .hero h1{color:#0e327a}
+  .hero .nav-contact{color:#fff}
+  .value-strip>div{background:rgba(255,255,255,.81)}
+}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"배달·퀵·대리운전 업무용 알뜰폰","description":"앤텔레콤 후불 추가 회선 안내","url":"https://prepaid1215.github.io/test-post/switch/work-phone/","isPartOf":{"@type":"WebSite","name":"59만모바일","url":"https://prepaid1215.github.io/test-post/"}}</script>
 </head>
