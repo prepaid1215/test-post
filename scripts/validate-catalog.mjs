@@ -51,13 +51,13 @@ if(!locs.includes(detailUrl))errors.push("L7GB story URL absent from sitemap");
 if(!fs.existsSync(detailFile))errors.push("L7GB product detail not generated");
 else{
  const detail=fs.readFileSync(detailFile,"utf8");
- if((detail.match(/<h1\\b/g)||[]).length!==1)errors.push("L7GB detail invalid H1");
+ if((detail.match(/<h1\b/g)||[]).length!==1)errors.push("L7GB detail invalid H1");
  if(!detail.includes('rel="canonical" href="'+detailUrl+'"'))errors.push("L7GB detail invalid canonical");
  for(const marker of ['id="story"','id="purchase"','id="current-fee"','id="copy-name"','name="join-method"','class="mobile-sticky"','class="story-opening"']){
   if(!detail.includes(marker))errors.push("L7GB detail missing "+marker);
  }
  if(!detail.includes("product-story.css")||!detail.includes("product-story.js"))errors.push("L7GB story assets missing");
- for(const [,link] of detail.matchAll(/\\b(?:href|src)="([^"]+)"/g)){
+ for(const [,link] of detail.matchAll(/\b(?:href|src)="([^"]+)"/g)){
   if(!link||link.startsWith("#")||/^(https?:|mailto:|tel:|data:)/i.test(link))continue;
   const raw=link.split(/[?#]/)[0];
   const p=path.resolve(path.dirname(detailFile),decodeURIComponent(raw));
