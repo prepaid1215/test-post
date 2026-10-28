@@ -73,7 +73,7 @@ for(const s of specs){
 }
 const sitemap=fs.readFileSync("site/sitemap.xml","utf8");
 const locs=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(x=>x[1]);
-if(locs.length!==20||new Set(locs).size!==20)errors.push("sitemap count != 20");
+if(locs.length!==21||new Set(locs).size!==20)errors.push("sitemap count != 21");
 if(!fs.existsSync("site/assets/catalog.js")||!fs.existsSync("site/assets/catalog.css")||!fs.existsSync("site/assets/conversion.js"))errors.push("assets missing");
 const detailFile="site/plans/l-7gb/index.html";
 const detailUrl=base+"plans/l-7gb/";
@@ -102,5 +102,27 @@ for(const asset of ["site/assets/home.css","site/assets/home.js"])if(!fs.existsS
 for(const asset of ["site/assets/experiment-landings.css","site/assets/experiment-landings.js"])if(!fs.existsSync(asset))errors.push(asset+" missing");
 
 
+const zeroFile="site/price/zero-won/index.html",zeroUrl=base+"price/zero-won/";
+if(!locs.includes(zeroUrl))errors.push("0-won experiment URL not in sitemap");
+if(!fs.existsSync(zeroFile))errors.push("0-won landing missing");
+else{
+ const z=fs.readFileSync(zeroFile,"utf8");
+ if((z.match(/<h1\b/g)||[]).length!==1)errors.push("0-won landing wrong H1 count");
+ if(!z.includes('rel="canonical" href="'+zeroUrl+'"'))errors.push("0-won canonical invalid");
+ for(const marker of ['id="calculator"','id="promo-fee"','id="promo-months"','id="after-fee"','id="promo-total"','id="our-total"','data-zero-cta="7gb-detail"','0원 상품을 판매하지 않습니다','zero-won.css?v=20261028-1','zero-won.js?v=20261028-1']){
+  if(!z.includes(marker))errors.push("0-won page missing marker "+marker);
+ }
+ for(const [,link] of z.matchAll(/\b(?:href|src)="([^"]+)"/g)){
+  if(!link||link.startsWith("#")||/^(https?:|mailto:|tel:|data:)/i.test(link))continue;
+  const raw=link.split(/[?#]/)[0];
+  const target0=path.resolve(path.dirname(zeroFile),decodeURIComponent(raw));
+  const target=path.extname(target0)?target0:path.join(target0,"index.html");
+  checked++;
+  if(!target.startsWith(path.resolve("site")+path.sep)||!fs.existsSync(target))errors.push("0-won broken relative asset "+link);
+ }
+}
+if(!fs.readFileSync("site/index.html","utf8").includes('href="price/zero-won/"'))errors.push("home does not discover 0-won landing");
+if(!fs.readFileSync("site/price/under-20000/index.html","utf8").includes('href="../zero-won/"'))errors.push("budget page does not discover 0-won landing");
+for(const asset of ["site/assets/zero-won.css","site/assets/zero-won.js"])if(!fs.existsSync(asset))errors.push(asset+" missing");
 if(errors.length){console.error(errors.slice(0,40).join("\n"));throw Error(errors.length+" catalog QA errors");}
-console.log("STORE + HOME QA PASS: 20 pages; "+checked+" internal paths; unique canonical & title; 1 CSS; filters, comparison and mobile navigation present.");
+console.log("STORE + HOME + 0-WON QA PASS: 21 pages; "+checked+" internal paths; unique canonical & title; 1 CSS; filters, comparison and mobile navigation present.");

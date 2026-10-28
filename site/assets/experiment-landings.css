@@ -119,3 +119,10 @@ body[data-landing] .list-title h2:before{content:"다른 ";font-weight:640;color
 }
 @media(max-width:370px){.exp-speed-options{grid-template-columns:1fr}.exp-speed-choice{min-height:0;display:grid;grid-template-columns:50px 1fr}}
 @media(prefers-reduced-motion:reduce){body[data-landing] *{scroll-behavior:auto!important}}
+
+/* Small cross-link from the 1만원대 landing to the 0원 ad comparison. */
+.zero-inline{background:#f7fff1;border:1px solid #dcebcf;border-radius:12px;padding:15px 21px;margin:13px 0 18px;display:flex;align-items:center;gap:16px}
+.zero-inline strong{font-size:13px;white-space:nowrap}
+.zero-inline p{font-size:12px;color:#6b7665;margin:0;flex:1}
+.zero-inline a{font-size:12px;font-weight:850;color:#3c793a;white-space:nowrap}
+@media(max-width:760px){.zero-inline{display:block;padding:15px}.zero-inline strong{font-size:13px}.zero-inline p{margin:5px 0}.zero-inline a{display:inline-block;margin-top:6px}}

@@ -239,3 +239,11 @@ a:hover{text-decoration:none}a:focus-visible,button:focus-visible,input:focus-vi
  .match-choice{min-height:0;flex-direction:row;align-items:center;justify-content:space-between;padding:9px 11px}
  .match-choice small{margin:0}
 }
+
+/* Discoverability for the zero-won ad explainer. */
+.zero-discovery{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#f4faec;border:1px solid #e4edca;border-radius:14px;padding:18px 24px;margin-top:16px;margin-bottom:19px}
+.zero-discovery div{display:flex;flex-direction:column;gap:3px}
+.zero-discovery strong{font-size:17px;letter-spacing:-.04em}
+.zero-discovery span{color:#6c7068;font-size:12px}
+.zero-discovery a{white-space:nowrap;font-size:13px;color:#315c24;font-weight:850}
+@media(max-width:760px){.zero-discovery{display:block;padding:17px;margin-top:9px;margin-bottom:0}.zero-discovery strong{font-size:15px}.zero-discovery a{display:inline-block;margin-top:10px;font-size:12px}}
