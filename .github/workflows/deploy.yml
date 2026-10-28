@@ -26,6 +26,8 @@ jobs:
         run: node scripts/enhance-conversion.mjs
       - name: Build L7GB product story and connect catalog cards
         run: node scripts/build-product-story.mjs
+      - name: Build story-driven shopping homepage
+        run: node scripts/build-story-home.mjs
       - name: Check client scripts for syntax errors
         run: |
           node --check site/assets/catalog.js
@@ -33,6 +35,8 @@ jobs:
           node --check scripts/enhance-conversion.mjs
           node --check scripts/build-product-story.mjs
           node --check site/assets/product-story.js
+          node --check scripts/build-story-home.mjs
+          node --check site/assets/home.js
       - name: Check site structure and links
         run: node scripts/validate-catalog.mjs
       - uses: actions/configure-pages@v5

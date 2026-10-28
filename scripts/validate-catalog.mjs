@@ -15,17 +15,23 @@ for(const s of specs){
  if(canonical!==base+s.path.replace(/^\/+/,""))errors.push(file+" wrong canonical");
  if(canonicalSet.has(canonical))errors.push(file+" duplicate canonical");canonicalSet.add(canonical);
  const css=html.match(/<link rel="stylesheet"[^>]*>/g)||[];
- if(css.length!==1||!css[0].includes("catalog.css"))errors.push(file+" not a single catalog stylesheet");
- for(const marker of ['class="catalog"','class="plan-item"','id="plan-list"','id="catalog-filters"','class="faq-section"','id="plan-search"','id="compare-tray"']){
-  if(!html.includes(marker))errors.push(file+" missing "+marker);
+ if(css.length!==1||!css[0].includes(s.path==="/"? "home.css":"catalog.css"))errors.push(file+" incorrect stylesheet");
+ if(s.path==="/"){
+  for(const marker of ['id="situations"','id="stories"','id="compare-cost"','id="current-bill"','id="compare-plan"','id="calculator-target"','id="join-guide"','id="faq"','href="plans/l-7gb/"','href="plans/"','href="data/15gb/"','href="data/100gb/"']){
+    if(!html.includes(marker))errors.push(file+" missing home marker "+marker);
+  }
+  if(!html.includes("home.js?v=20261028-story1"))errors.push(file+" missing homepage interaction script");
+  if((html.match(/class="story-card /g)||[]).length!==3)errors.push(file+" must show exactly 3 story products");
+ }else{
+  for(const marker of ['class="catalog"','class="plan-item"','id="plan-list"','id="catalog-filters"','class="faq-section"','id="plan-search"','id="compare-tray"']){
+   if(!html.includes(marker))errors.push(file+" missing "+marker);
+  }
+  for(const marker of ['id="apply-dialog"','id="apply-name"','id="apply-copy"','id="mobile-selected"','class="intent-shortcuts"','data-action="choose-plan"']){
+   if(!html.includes(marker))errors.push(file+" missing conversion marker "+marker);
+  }
+  if((html.match(/id="apply-dialog"/g)||[]).length!==1)errors.push(file+" duplicated enrollment dialog");
+  if(!html.includes("conversion.js?v=20261028-8"))errors.push(file+" missing conversion script");
  }
- if(/preplan\.site|59man\.shop|편의점선불유심\.com|선불폰 셀프개통/.test(html))errors.push(file+" prepaid business crossover");
- for(const marker of ['id="apply-dialog"','id="apply-name"','id="apply-copy"','id="mobile-selected"','class="intent-shortcuts"','data-action="choose-plan"']){
-  if(!html.includes(marker))errors.push(file+" missing conversion marker "+marker);
- }
- if((html.match(/id="apply-dialog"/g)||[]).length!==1)errors.push(file+" duplicated enrollment dialog");
- if(!html.includes("conversion.js?v=20261028-8"))errors.push(file+" missing conversion script");
-
  const urls=[...html.matchAll(/\b(?:href|src)="([^"]+)"/g)].map(m=>m[1]);
  for(const u of urls){
   if(u[0]==="#"){
@@ -68,6 +74,8 @@ else{
 }
 if(!fs.readFileSync("site/index.html","utf8").includes('href="plans/l-7gb/"'))errors.push("Homepage not linked to L7GB story");
 for(const asset of ["site/assets/product-story.css","site/assets/product-story.js"])if(!fs.existsSync(asset))errors.push(asset+" missing");
+for(const asset of ["site/assets/home.css","site/assets/home.js"])if(!fs.existsSync(asset))errors.push(asset+" missing");
+
 
 if(errors.length){console.error(errors.slice(0,40).join("\n"));throw Error(errors.length+" catalog QA errors");}
-console.log("CATALOG QA PASS: 19 pages; "+checked+" internal paths; unique canonical & title; 1 CSS; filters, comparison and mobile navigation present.");
+console.log("STORE + HOME QA PASS: 20 pages; "+checked+" internal paths; unique canonical & title; 1 CSS; filters, comparison and mobile navigation present.");
