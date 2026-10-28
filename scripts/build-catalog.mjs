@@ -109,13 +109,28 @@ function render(s,specs,plans,benefits,content){
  const jsp=pathTo(s.path,"/assets/catalog.js");
  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${E(title)}</title><meta name="description" content="${E(desc)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="${canonical}"><meta property="og:locale" content="ko_KR"><meta property="og:type" content="website"><meta property="og:title" content="${E(title)}"><meta property="og:description" content="${E(desc)}"><meta property="og:url" content="${canonical}"><link rel="icon" href="${pathTo(s.path,"/assets/favicon.svg")}"><link rel="stylesheet" href="${depthpath}?v=20261028-5"><script type="application/ld+json">${JSON.stringify(schema).replace(/</g,"\\u003c")}</script></head>
  <body data-mode="${E(s.mode)}"><a class="skip" href="#main">본문 바로가기</a>
- <header class="header"><div class="wrap header-inner"><a class="logo" href="${pathTo(s.path,"/")}">알뜰폰<span class="logo-point">요금제</span></a><nav class="desktop-nav" aria-label="주 메뉴"><a href="${pathTo(s.path,"/")}">전체 요금제</a><a href="${pathTo(s.path,"/price/under-20000/")}">1만원대</a><a href="${pathTo(s.path,"/unlimited/")}">데이터 무제한</a><a href="${pathTo(s.path,"/number-transfer/")}">번호이동</a></nav><a class="header-link" href="https://www.n-telecom.co.kr/59man/view/plan/phone_plan.aspx" target="_blank" rel="noopener noreferrer">공식 요금제 확인 ↗</a></div></header>
+ <div class="top-accent" aria-hidden="true"></div><header class="header"><div class="wrap header-inner"><a class="logo" href="${pathTo(s.path,"/")}">알뜰폰<span class="logo-point">요금제.</span></a><nav class="desktop-nav" aria-label="주 메뉴"><a href="${pathTo(s.path,"/")}">전체 요금제</a><a href="${pathTo(s.path,"/price/under-20000/")}">1만원대</a><a href="${pathTo(s.path,"/unlimited/")}">데이터 무제한</a><a href="${pathTo(s.path,"/number-transfer/")}">번호이동</a></nav><a class="header-link" href="https://www.n-telecom.co.kr/59man/view/plan/phone_plan.aspx" target="_blank" rel="noopener noreferrer">요금제 신청 안내 <span aria-hidden="true">↗</span></a></div></header>
  <main class="wrap" id="main"><nav class="breadcrumbs" aria-label="현재 위치"><a href="${pathTo(s.path,"/")}">알뜰폰 요금제</a>${s.path!=="/"?"  /  "+E(s.term):""}</nav>
- <section class="page-intro"><h1>${E(h1)}</h1><p class="lead">${E(lead)}</p><p class="source-note">2026년 9월 상품 조사 · 가격과 혜택은 가입 시점에 다시 확인해 주세요.</p></section>
+ <section class="page-intro ${s.path==="/"?"page-intro-home":"page-intro-detail"}">
+  <div class="intro-copy">
+    <p class="intro-kicker"><span class="kicker-dot"></span> 알뜰폰 요금제 비교 · KT망 / LG U+망</p>
+    <h1>${E(h1)}</h1>
+    <p class="lead">${E(lead)}</p>
+    <div class="intro-actions"><a href="#plans" class="intro-primary">요금제 찾아보기 <span aria-hidden="true">→</span></a><a href="#guide" class="intro-secondary">요금제 선택 가이드</a></div>
+    <p class="source-note">2026년 9월 조사 자료 · 가격과 혜택은 가입 시 다시 확인해 주세요.</p>
+  </div>
+  <div class="intro-summary" aria-label="요금제 비교 자료">
+    <span class="summary-eyebrow">알뜰폰 요금제 비교</span>
+    <strong>${list.length}<span>개 상품</span></strong>
+    <div class="summary-line"></div>
+    <p>월 기본료 <b>${won(list.length?Math.min(...list.map(p=>p.monthly_price)):0)}부터</b></p>
+    <small>앤텔레콤 조사 자료 기준<br>현재 판매가격은 공식 화면 확인</small>
+  </div>
+</section>
  <nav class="tag-nav" aria-label="요금제 주제">${nav}</nav>
  <section class="catalog" id="plans">${filterMarkup()}
   <div class="catalog-content"><div class="list-top"><div class="list-title"><h2>요금제 목록</h2><strong id="result-count">${list.length}개</strong></div><div class="sort-area"><span>정렬</span><select id="sort-by" aria-label="요금제 정렬"><option value="price-asc">낮은 요금순</option><option value="price-desc">높은 요금순</option><option value="data-desc">데이터 많은순</option></select></div></div>
-  <label class="search-label" for="plan-search"><span>요금제 검색</span><input id="plan-search" class="search-input" type="search" placeholder="예: 15GB, 네이버페이, 밀리의서재" autocomplete="off"></label>\n  <p class="catalog-alert">앤텔레콤 알뜰폰 상품 ${list.length}개를 비교합니다. 다른 통신사의 상품은 포함하지 않습니다.</p>
+  <label class="search-label" for="plan-search"><span>요금제 검색</span><input id="plan-search" class="search-input" type="search" placeholder="예: 15GB, 네이버페이, 밀리의서재" autocomplete="off"></label>\n  <p class="catalog-alert">앤텔레콤 알뜰폰 요금제 ${list.length}개를 정리했습니다. 다른 사업자 상품은 포함하지 않으며, 표시된 가격은 조사 당시 기본료입니다.</p>
   <div class="plan-list" id="plan-list">${list.map(p=>makeCard(p,benefitMap)).join("")}</div>
   <div class="empty" id="empty-results" hidden><b>조건에 맞는 상품이 없습니다.</b>다른 조건을 선택하거나 필터를 초기화해 보세요.</div>
   <button class="more-btn" id="load-more" type="button" hidden>요금제 더 보기</button>
