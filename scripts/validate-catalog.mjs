@@ -20,6 +20,12 @@ for(const s of specs){
   if(!html.includes(marker))errors.push(file+" missing "+marker);
  }
  if(/preplan\.site|59man\.shop|편의점선불유심\.com|선불폰 셀프개통/.test(html))errors.push(file+" prepaid business crossover");
+ for(const marker of ['id="apply-dialog"','id="apply-name"','id="apply-copy"','id="mobile-selected"','class="intent-shortcuts"','data-action="choose-plan"']){
+  if(!html.includes(marker))errors.push(file+" missing conversion marker "+marker);
+ }
+ if((html.match(/id="apply-dialog"/g)||[]).length!==1)errors.push(file+" duplicated enrollment dialog");
+ if(!html.includes("conversion.js?v=20261028-8"))errors.push(file+" missing conversion script");
+
  const urls=[...html.matchAll(/\b(?:href|src)="([^"]+)"/g)].map(m=>m[1]);
  for(const u of urls){
   if(u[0]==="#"){
@@ -38,6 +44,6 @@ for(const s of specs){
 const sitemap=fs.readFileSync("site/sitemap.xml","utf8");
 const locs=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(x=>x[1]);
 if(locs.length!==19||new Set(locs).size!==19)errors.push("sitemap count != 19");
-if(!fs.existsSync("site/assets/catalog.js")||!fs.existsSync("site/assets/catalog.css"))errors.push("assets missing");
+if(!fs.existsSync("site/assets/catalog.js")||!fs.existsSync("site/assets/catalog.css")||!fs.existsSync("site/assets/conversion.js"))errors.push("assets missing");
 if(errors.length){console.error(errors.slice(0,40).join("\n"));throw Error(errors.length+" catalog QA errors");}
 console.log("CATALOG QA PASS: 19 pages; "+checked+" internal paths; unique canonical & title; 1 CSS; filters, comparison and mobile navigation present.");
