@@ -73,7 +73,7 @@ for(const s of specs){
 }
 const sitemap=fs.readFileSync("site/sitemap.xml","utf8");
 const locs=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(x=>x[1]);
-if(locs.length!==21||new Set(locs).size!==20)errors.push("sitemap count != 21");
+if(locs.length!==21||new Set(locs).size!==21)errors.push("sitemap count != 21");
 if(!fs.existsSync("site/assets/catalog.js")||!fs.existsSync("site/assets/catalog.css")||!fs.existsSync("site/assets/conversion.js"))errors.push("assets missing");
 const detailFile="site/plans/l-7gb/index.html";
 const detailUrl=base+"plans/l-7gb/";
