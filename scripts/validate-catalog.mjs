@@ -43,7 +43,31 @@ for(const s of specs){
 }
 const sitemap=fs.readFileSync("site/sitemap.xml","utf8");
 const locs=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(x=>x[1]);
-if(locs.length!==19||new Set(locs).size!==19)errors.push("sitemap count != 19");
+if(locs.length!==20||new Set(locs).size!==20)errors.push("sitemap count != 20");
 if(!fs.existsSync("site/assets/catalog.js")||!fs.existsSync("site/assets/catalog.css")||!fs.existsSync("site/assets/conversion.js"))errors.push("assets missing");
+const detailFile="site/plans/l-7gb/index.html";
+const detailUrl=base+"plans/l-7gb/";
+if(!locs.includes(detailUrl))errors.push("L7GB story URL absent from sitemap");
+if(!fs.existsSync(detailFile))errors.push("L7GB product detail not generated");
+else{
+ const detail=fs.readFileSync(detailFile,"utf8");
+ if((detail.match(/<h1\\b/g)||[]).length!==1)errors.push("L7GB detail invalid H1");
+ if(!detail.includes('rel="canonical" href="'+detailUrl+'"'))errors.push("L7GB detail invalid canonical");
+ for(const marker of ['id="story"','id="purchase"','id="current-fee"','id="copy-name"','name="join-method"','class="mobile-sticky"','class="story-opening"']){
+  if(!detail.includes(marker))errors.push("L7GB detail missing "+marker);
+ }
+ if(!detail.includes("product-story.css")||!detail.includes("product-story.js"))errors.push("L7GB story assets missing");
+ for(const [,link] of detail.matchAll(/\\b(?:href|src)="([^"]+)"/g)){
+  if(!link||link.startsWith("#")||/^(https?:|mailto:|tel:|data:)/i.test(link))continue;
+  const raw=link.split(/[?#]/)[0];
+  const p=path.resolve(path.dirname(detailFile),decodeURIComponent(raw));
+  const dest=path.extname(p)?p:path.join(p,"index.html");
+  checked++;
+  if(!dest.startsWith(path.resolve("site")+path.sep)||!fs.existsSync(dest))errors.push("L7GB broken relative asset "+link);
+ }
+}
+if(!fs.readFileSync("site/index.html","utf8").includes('href="plans/l-7gb/"'))errors.push("Homepage not linked to L7GB story");
+for(const asset of ["site/assets/product-story.css","site/assets/product-story.js"])if(!fs.existsSync(asset))errors.push(asset+" missing");
+
 if(errors.length){console.error(errors.slice(0,40).join("\n"));throw Error(errors.length+" catalog QA errors");}
 console.log("CATALOG QA PASS: 19 pages; "+checked+" internal paths; unique canonical & title; 1 CSS; filters, comparison and mobile navigation present.");

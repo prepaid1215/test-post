@@ -24,11 +24,15 @@ jobs:
         run: node scripts/build-catalog.mjs
       - name: Add plan-specific choice and signup handoff
         run: node scripts/enhance-conversion.mjs
+      - name: Build L7GB product story and connect catalog cards
+        run: node scripts/build-product-story.mjs
       - name: Check client scripts for syntax errors
         run: |
           node --check site/assets/catalog.js
           node --check site/assets/conversion.js
           node --check scripts/enhance-conversion.mjs
+          node --check scripts/build-product-story.mjs
+          node --check site/assets/product-story.js
       - name: Check site structure and links
         run: node scripts/validate-catalog.mjs
       - uses: actions/configure-pages@v5
