@@ -1,0 +1,886 @@
+[
+  {
+    "id": "ntelecom-k-7gb-coupang-cash",
+    "name": "앤텔레콤 K망 7GB+(쿠팡캐쉬)",
+    "network": "K",
+    "monthly_price": 21100,
+    "data_gb": 7,
+    "daily_data_gb": null,
+    "data_text": "7GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-coupang-cash"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-10gb-coupang-cash",
+    "name": "앤텔레콤 K망 10GB+(쿠팡캐쉬)",
+    "network": "K",
+    "monthly_price": 23800,
+    "data_gb": 10,
+    "daily_data_gb": null,
+    "data_text": "10GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-coupang-cash"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-15gb-coupang-cash",
+    "name": "앤텔레콤 K망 15GB+(쿠팡캐쉬)",
+    "network": "K",
+    "monthly_price": 25800,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-coupang-cash"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-100min-15gb-coupang-cash",
+    "name": "앤텔레콤 K망 100분/15GB+(쿠팡캐쉬)",
+    "network": "K",
+    "monthly_price": 31700,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "100분 (망내 1회선 무제한 지정 가능)",
+    "sms": "100건",
+    "benefit_ids": [
+      "benefit-coupang-cash"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-300min-15gb-coupang-cash",
+    "name": "앤텔레콤 K망 300분/15GB+(쿠팡캐쉬)",
+    "network": "K",
+    "monthly_price": 33800,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "300분 (망내 1회선 무제한 지정 가능)",
+    "sms": "300건",
+    "benefit_ids": [
+      "benefit-coupang-cash"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-11gb-daily2gb-coupang-cash",
+    "name": "앤텔레콤 K망 11GB+일2GB(쿠팡캐쉬)",
+    "network": "K",
+    "monthly_price": 39900,
+    "data_gb": 11,
+    "daily_data_gb": 2,
+    "data_text": "11GB + 매일 2GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-coupang-cash"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-100gb-coupang-cash",
+    "name": "앤텔레콤 K망 100GB+(쿠팡캐쉬)",
+    "network": "K",
+    "monthly_price": 45500,
+    "data_gb": 100,
+    "daily_data_gb": null,
+    "data_text": "100GB + 소진 후 최대 5Mbps",
+    "after_speed": "5Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-coupang-cash"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-7gb-naverpay",
+    "name": "앤텔레콤 K망 7GB+(네이버페이)",
+    "network": "K",
+    "monthly_price": 21100,
+    "data_gb": 7,
+    "daily_data_gb": null,
+    "data_text": "7GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-naverpay"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-10gb-naverpay",
+    "name": "앤텔레콤 K망 10GB+(네이버페이)",
+    "network": "K",
+    "monthly_price": 23800,
+    "data_gb": 10,
+    "daily_data_gb": null,
+    "data_text": "10GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-naverpay"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-15gb-naverpay",
+    "name": "앤텔레콤 K망 15GB+(네이버페이)",
+    "network": "K",
+    "monthly_price": 25800,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-naverpay"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-100min-15gb-naverpay",
+    "name": "앤텔레콤 K망 100분/15GB+(네이버페이)",
+    "network": "K",
+    "monthly_price": 31700,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "100분 (망내 1회선 무제한 지정 가능)",
+    "sms": "100건",
+    "benefit_ids": [
+      "benefit-naverpay"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-300min-15gb-naverpay",
+    "name": "앤텔레콤 K망 300분/15GB+(네이버페이)",
+    "network": "K",
+    "monthly_price": 33800,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "300분 (망내 1회선 무제한 지정 가능)",
+    "sms": "300건",
+    "benefit_ids": [
+      "benefit-naverpay"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-11gb-daily2gb-naverpay",
+    "name": "앤텔레콤 K망 11GB+일2GB(네이버페이)",
+    "network": "K",
+    "monthly_price": 39900,
+    "data_gb": 11,
+    "daily_data_gb": 2,
+    "data_text": "11GB + 매일 2GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-naverpay"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-100gb-naverpay",
+    "name": "앤텔레콤 K망 100GB+(네이버페이)",
+    "network": "K",
+    "monthly_price": 45500,
+    "data_gb": 100,
+    "daily_data_gb": null,
+    "data_text": "100GB + 소진 후 최대 5Mbps",
+    "after_speed": "5Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-naverpay"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-7gb-daiso",
+    "name": "앤텔레콤 K망 7GB+(다이소)",
+    "network": "K",
+    "monthly_price": 21100,
+    "data_gb": 7,
+    "daily_data_gb": null,
+    "data_text": "7GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-daiso"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-10gb-daiso",
+    "name": "앤텔레콤 K망 10GB+(다이소)",
+    "network": "K",
+    "monthly_price": 23800,
+    "data_gb": 10,
+    "daily_data_gb": null,
+    "data_text": "10GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-daiso"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-15gb-daiso",
+    "name": "앤텔레콤 K망 15GB+(다이소)",
+    "network": "K",
+    "monthly_price": 25800,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 1Mbps",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-daiso"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-100min-15gb-daiso",
+    "name": "앤텔레콤 K망 100분/15GB+(다이소)",
+    "network": "K",
+    "monthly_price": 31700,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "100분 (망내 1회선 무제한 지정 가능)",
+    "sms": "100건",
+    "benefit_ids": [
+      "benefit-daiso"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-300min-15gb-daiso",
+    "name": "앤텔레콤 K망 300분/15GB+(다이소)",
+    "network": "K",
+    "monthly_price": 33800,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "300분 (망내 1회선 무제한 지정 가능)",
+    "sms": "300건",
+    "benefit_ids": [
+      "benefit-daiso"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-11gb-daily2gb-daiso",
+    "name": "앤텔레콤 K망 11GB+일2GB(다이소)",
+    "network": "K",
+    "monthly_price": 39900,
+    "data_gb": 11,
+    "daily_data_gb": 2,
+    "data_text": "11GB + 매일 2GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-daiso"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-100gb-daiso",
+    "name": "앤텔레콤 K망 100GB+(다이소)",
+    "network": "K",
+    "monthly_price": 45500,
+    "data_gb": 100,
+    "daily_data_gb": null,
+    "data_text": "100GB + 소진 후 최대 5Mbps",
+    "after_speed": "5Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-daiso"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-7gb-millie",
+    "name": "앤텔레콤 K망 7GB+(밀리의서재)",
+    "network": "K",
+    "monthly_price": 19500,
+    "data_gb": 7,
+    "daily_data_gb": null,
+    "data_text": "7GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-millie"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-10gb-millie",
+    "name": "앤텔레콤 K망 10GB+(밀리의서재)",
+    "network": "K",
+    "monthly_price": 22300,
+    "data_gb": 10,
+    "daily_data_gb": null,
+    "data_text": "10GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-millie"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-15gb-millie",
+    "name": "앤텔레콤 K망 15GB+(밀리의서재)",
+    "network": "K",
+    "monthly_price": 23500,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 1Mbps",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-millie"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-100min-15gb-millie",
+    "name": "앤텔레콤 K망 100분/15GB+(밀리의서재)",
+    "network": "K",
+    "monthly_price": 29300,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "100분 (망내 1회선 무제한 지정 가능)",
+    "sms": "100건",
+    "benefit_ids": [
+      "benefit-millie"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-300min-15gb-millie",
+    "name": "앤텔레콤 K망 300분/15GB+(밀리의서재)",
+    "network": "K",
+    "monthly_price": 31500,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "300분 (망내 1회선 무제한 지정 가능)",
+    "sms": "300건",
+    "benefit_ids": [
+      "benefit-millie"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-11gb-daily2gb-millie",
+    "name": "앤텔레콤 K망 11GB+일2GB(밀리의서재)",
+    "network": "K",
+    "monthly_price": 37500,
+    "data_gb": 11,
+    "daily_data_gb": 2,
+    "data_text": "11GB + 매일 2GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-millie"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-100gb-millie",
+    "name": "앤텔레콤 K망 100GB+(밀리의서재)",
+    "network": "K",
+    "monthly_price": 43200,
+    "data_gb": 100,
+    "daily_data_gb": null,
+    "data_text": "100GB + 소진 후 최대 5Mbps",
+    "after_speed": "5Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-millie"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-7gb-oliveyoung",
+    "name": "앤텔레콤 K망 7GB+(올리브영)",
+    "network": "K",
+    "monthly_price": 21100,
+    "data_gb": 7,
+    "daily_data_gb": null,
+    "data_text": "7GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-oliveyoung"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-10gb-oliveyoung",
+    "name": "앤텔레콤 K망 10GB+(올리브영)",
+    "network": "K",
+    "monthly_price": 23800,
+    "data_gb": 10,
+    "daily_data_gb": null,
+    "data_text": "10GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-oliveyoung"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-15gb-oliveyoung",
+    "name": "앤텔레콤 K망 15GB+(올리브영)",
+    "network": "K",
+    "monthly_price": 25800,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-oliveyoung"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-100min-15gb-oliveyoung",
+    "name": "앤텔레콤 K망 100분/15GB+(올리브영)",
+    "network": "K",
+    "monthly_price": 31700,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "100분 (망내 1회선 무제한 지정 가능)",
+    "sms": "100건",
+    "benefit_ids": [
+      "benefit-oliveyoung"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-300min-15gb-oliveyoung",
+    "name": "앤텔레콤 K망 300분/15GB+(올리브영)",
+    "network": "K",
+    "monthly_price": 33800,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "300분 (망내 1회선 무제한 지정 가능)",
+    "sms": "300건",
+    "benefit_ids": [
+      "benefit-oliveyoung"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-11gb-daily2gb-oliveyoung",
+    "name": "앤텔레콤 K망 11GB+일2GB(올리브영)",
+    "network": "K",
+    "monthly_price": 39900,
+    "data_gb": 11,
+    "daily_data_gb": 2,
+    "data_text": "11GB + 매일 2GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-oliveyoung"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-100gb-oliveyoung",
+    "name": "앤텔레콤 K망 100GB+(올리브영)",
+    "network": "K",
+    "monthly_price": 45500,
+    "data_gb": 100,
+    "daily_data_gb": null,
+    "data_text": "100GB + 소진 후 최대 5Mbps",
+    "after_speed": "5Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-oliveyoung"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-7gb-cu",
+    "name": "앤텔레콤 K망 7GB+(CU)",
+    "network": "K",
+    "monthly_price": 19500,
+    "data_gb": 7,
+    "daily_data_gb": null,
+    "data_text": "7GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-cu"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-10gb-cu",
+    "name": "앤텔레콤 K망 10GB+(CU)",
+    "network": "K",
+    "monthly_price": 22300,
+    "data_gb": 10,
+    "daily_data_gb": null,
+    "data_text": "10GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-cu"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-15gb-cu",
+    "name": "앤텔레콤 K망 15GB+(CU)",
+    "network": "K",
+    "monthly_price": 24000,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 1Mbps + 데이터 10GB 추가(24개월)",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-cu"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": {
+      "description": "매월 데이터 10GB 추가 제공(개통 후 24개월)",
+      "end_date": "2026-12-31"
+    }
+  },
+  {
+    "id": "ntelecom-k-100min-15gb-cu",
+    "name": "앤텔레콤 K망 100분/15GB+(CU)",
+    "network": "K",
+    "monthly_price": 29300,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "100분 (망내 1회선 무제한 지정 가능)",
+    "sms": "100건",
+    "benefit_ids": [
+      "benefit-cu"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-300min-15gb-cu",
+    "name": "앤텔레콤 K망 300분/15GB+(CU)",
+    "network": "K",
+    "monthly_price": 31500,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "300분 (망내 1회선 무제한 지정 가능)",
+    "sms": "300건",
+    "benefit_ids": [
+      "benefit-cu"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-11gb-daily2gb-cu",
+    "name": "앤텔레콤 K망 11GB+일2GB(CU)",
+    "network": "K",
+    "monthly_price": 37500,
+    "data_gb": 11,
+    "daily_data_gb": 2,
+    "data_text": "11GB + 매일 2GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-cu"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-k-100gb-cu",
+    "name": "앤텔레콤 K망 100GB+(CU)",
+    "network": "K",
+    "monthly_price": 43200,
+    "data_gb": 100,
+    "daily_data_gb": null,
+    "data_text": "100GB + 소진 후 최대 5Mbps",
+    "after_speed": "5Mbps",
+    "calls": "기본제공 (영상/부가통화 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [
+      "benefit-cu"
+    ],
+    "port_available": true,
+    "new_available": true,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-l-100min-15gb",
+    "name": "L망후불 100분 15GB+",
+    "network": "L",
+    "monthly_price": 28500,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "100분 (망내 1회선 무제한 지정 가능)",
+    "sms": "100건",
+    "benefit_ids": [],
+    "port_available": null,
+    "new_available": null,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-l-300min-15gb",
+    "name": "L망후불 300분 15GB+",
+    "network": "L",
+    "monthly_price": 30600,
+    "data_gb": 15,
+    "daily_data_gb": null,
+    "data_text": "15GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "300분 (망내 1회선 무제한 지정 가능)",
+    "sms": "300건",
+    "benefit_ids": [],
+    "port_available": null,
+    "new_available": null,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-l-11gb-daily2gb",
+    "name": "L망후불 11GB+일2GB",
+    "network": "L",
+    "monthly_price": 36700,
+    "data_gb": 11,
+    "daily_data_gb": 2,
+    "data_text": "11GB + 매일 2GB + 소진 후 최대 3Mbps",
+    "after_speed": "3Mbps",
+    "calls": "기본제공 (부가/영상 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [],
+    "port_available": null,
+    "new_available": null,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-l-daily5gb",
+    "name": "L망후불 매일 5GB+",
+    "network": "L",
+    "monthly_price": 43200,
+    "data_gb": null,
+    "daily_data_gb": 5,
+    "data_text": "매일 5GB + 소진 후 최대 5Mbps",
+    "after_speed": "5Mbps",
+    "calls": "기본제공 (부가/영상 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [],
+    "port_available": null,
+    "new_available": null,
+    "promotion": null
+  },
+  {
+    "id": "ntelecom-l-7gb",
+    "name": "L망후불 7GB+",
+    "network": "L",
+    "monthly_price": 17900,
+    "data_gb": 7,
+    "daily_data_gb": null,
+    "data_text": "7GB + 소진 후 최대 1Mbps",
+    "after_speed": "1Mbps",
+    "calls": "기본제공 (부가/영상 300분)",
+    "sms": "기본제공",
+    "benefit_ids": [],
+    "port_available": null,
+    "new_available": null,
+    "promotion": null
+  }
+]
