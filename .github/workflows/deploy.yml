@@ -1,4 +1,4 @@
-name: Publish 19 intent-led mobile-plan pages
+name: Publish mobile-plan storefront
 on:
   push:
     branches: [main]
@@ -20,14 +20,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - name: Generate 19 mobile plan pages
-        run: node scripts/build-consumer-pages.mjs
-      - name: Enrich consumer content and finder
-        run: node scripts/enhance-postpaid-pages.mjs
-      - name: Redesign for mobile-plan conversion
-        run: node scripts/redesign-conversion.mjs
-      - name: Validate SEO and internal links
-        run: node scripts/validate-postpaid-site.mjs
+      - name: Generate all 19 storefront pages
+        run: node scripts/build-storefront-v2.mjs
+      - name: Validate layout structure SEO and internal links
+        run: node scripts/validate-storefront-v2.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
