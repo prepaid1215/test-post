@@ -1,4 +1,4 @@
-name: Publish 19 intent-led postpaid pages
+name: Publish 19 intent-led mobile-plan pages
 on:
   push:
     branches: [main]
@@ -20,11 +20,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - name: Generate 19 postpaid pages
+      - name: Generate 19 mobile plan pages
         run: node scripts/build-consumer-pages.mjs
-      - name: Add detailed content and plan finder
+      - name: Enrich consumer content and finder
         run: node scripts/enhance-postpaid-pages.mjs
-      - name: Validate on-page SEO and internal links
+      - name: Redesign for mobile-plan conversion
+        run: node scripts/redesign-conversion.mjs
+      - name: Validate SEO and internal links
         run: node scripts/validate-postpaid-site.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
