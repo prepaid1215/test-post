@@ -112,4 +112,19 @@
     else if(a.dataset.action==="chat")track("catalog_chat_click");
   });
   paintTray();refresh();
+  // The home chooser can hand off an exact catalog item rather than a generic list.
+  const queryPlan=new URLSearchParams(location.search).get("plan");
+  if(queryPlan&&cards.has(queryPlan)){
+    const card=cards.get(queryPlan);
+    const existingOrder=[...list.querySelectorAll(".plan-item")];
+    const index=existingOrder.indexOf(card);
+    if(index>=0){
+      list.prepend(card);
+      card.hidden=false;
+      card.classList.add("home-match-target");
+      if(index>visibleLimit-1)visibleLimit+=1;
+      count.textContent=all.length+"개";
+      requestAnimationFrame(()=>card.scrollIntoView({block:"center",behavior:"auto"}));
+    }
+  }
 })();

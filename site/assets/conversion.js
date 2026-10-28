@@ -36,7 +36,8 @@
     copyName.textContent=p.name;
     dlg.querySelector("#apply-copy-feedback").textContent="";
     const path=location.pathname;
-    setMethod(path.includes("/number-transfer/")?"port":path.includes("/new-number/")?"new":"undecided");
+    const fromHome=new URLSearchParams(location.search).get("join");
+    setMethod(fromHome==="port"||fromHome==="new"?fromHome:(path.includes("/number-transfer/")?"port":path.includes("/new-number/")?"new":"undecided"));
     if(mobile){mobile.textContent="선택 요금제 가입 안내";mobile.href="#plans";mobile.dataset.plan=id;}
     track("catalog_plan_selected",{plan_id:id});
     if(typeof dlg.showModal==="function")dlg.showModal();

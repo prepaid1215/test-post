@@ -20,7 +20,16 @@ for(const s of specs){
   for(const marker of ['id="situations"','id="stories"','id="compare-cost"','id="current-bill"','id="compare-plan"','id="calculator-target"','id="join-guide"','id="faq"','href="plans/l-7gb/"','href="plans/"','href="data/15gb/"','href="data/100gb/"']){
     if(!html.includes(marker))errors.push(file+" missing home marker "+marker);
   }
-  if(!html.includes("home.js?v=20261028-story1"))errors.push(file+" missing homepage interaction script");
+  if(!html.includes("home.js?v=20261028-match2"))errors.push(file+" missing current homepage interaction script");
+  for(const marker of ['id="quick-match"','id="quick-match-data"','id="match-link"','id="match-plan-name"','name="quick-join"','data-usage="light"','data-usage="medium"','data-usage="heavy"']){
+    if(!html.includes(marker))errors.push(file+" missing homepage fast-choice marker "+marker);
+  }
+  if((html.match(/class="match-choice"/g)||[]).length!==3)errors.push(file+" expected 3 fast-choice buttons");
+  const matchPayload=html.match(/<script id="quick-match-data" type="application\/json">([\s\S]*?)<\/script>/);
+  try{
+   const parsed=JSON.parse(matchPayload?.[1]||"null");
+   if(!Array.isArray(parsed)||parsed.length!==3||parsed.some(x=>!x.id||!x.price||!x.reason||!x.url))errors.push(file+" malformed fast-choice products");
+  }catch(err){errors.push(file+" invalid fast-choice JSON");}
   if((html.match(/class="story-card /g)||[]).length!==3)errors.push(file+" must show exactly 3 story products");
  }else{
   for(const marker of ['class="catalog"','class="plan-item"','id="plan-list"','id="catalog-filters"','class="faq-section"','id="plan-search"','id="compare-tray"']){

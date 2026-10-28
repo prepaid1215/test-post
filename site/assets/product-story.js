@@ -39,6 +39,17 @@
    :"별도의 회선을 추가한다면 신규가입을 선택하세요. 본인확인과 가입 심사, 유심·단말 호환 여부를 공식 화면에서 확인합니다.";
   track("story_join_method",{method:c.value});
  }));
+ // Keep an explicitly chosen join type when the user arrives from the homepage.
+ const homeJoin=new URLSearchParams(location.search).get("join");
+ if(homeJoin==="port"||homeJoin==="new"){
+   const selected=choices.find(x=>x.value===homeJoin);
+   if(selected){
+     selected.checked=true;
+     explanation.textContent=homeJoin==="port"
+      ?"기존 번호를 유지하려면 현재 회선을 먼저 해지하지 마세요. 미납·정지 등의 제한 여부는 공식 신청 과정에서 확인합니다."
+      :"별도 회선을 신청하려면 신규가입 조건과 유심·단말 호환, 본인확인 절차를 공식 화면에서 확인하세요.";
+   }
+ }
  document.getElementById("copy-name")?.addEventListener("click",async()=>{
   const text=document.getElementById("plan-to-copy")?.value??"L망후불 7GB+";
   const result=document.getElementById("copy-result");
