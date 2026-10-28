@@ -1,0 +1,1 @@
+Temporary initial commit for the standalone 19-page static site deployment.
