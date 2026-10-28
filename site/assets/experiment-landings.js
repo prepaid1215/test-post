@@ -23,6 +23,8 @@
   };
   track("landing_view",{keyword:{"budget":"알뜰폰 1만원대","port":"알뜰폰 번호이동","unlimited":"알뜰폰 데이터 무제한","naverpay":"네이버페이 알뜰폰"}[page]});
   document.addEventListener("click",ev=>{
+    const brand=ev.target.closest("a[data-nt-cta]");
+    if(brand)track("ntelecom_reason_click",{reason:brand.dataset.ntCta,plan_id:brand.dataset.ntPlan||""});
     const anchor=ev.target.closest("a");
     if(anchor?.dataset?.landingCta){
       track("landing_cta_click",{position:anchor.dataset.landingCta,plan_id:anchor.dataset.plan||""});

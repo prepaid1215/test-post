@@ -44,6 +44,8 @@
   i.addEventListener("change",()=>{const r=calc();track("zero_won_comparison_calculated",{promo_months:r.months,promo_total:r.total,comparison_total:r.own});});
  });
  document.addEventListener("click",ev=>{
+  const brand=ev.target.closest("a[data-nt-cta]");
+  if(brand)track("ntelecom_reason_click",{reason:brand.dataset.ntCta,plan_id:brand.dataset.ntPlan||""});
   const a=ev.target.closest("a[data-zero-cta]");
   if(!a)return;
   track("zero_won_cta_click",{cta:a.dataset.zeroCta,plan_id:a.dataset.plan||""});

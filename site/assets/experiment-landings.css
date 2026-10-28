@@ -126,3 +126,57 @@ body[data-landing] .list-title h2:before{content:"다른 ";font-weight:640;color
 .zero-inline p{font-size:12px;color:#6b7665;margin:0;flex:1}
 .zero-inline a{font-size:12px;font-weight:850;color:#3c793a;white-space:nowrap}
 @media(max-width:760px){.zero-inline{display:block;padding:15px}.zero-inline strong{font-size:13px}.zero-inline p{margin:5px 0}.zero-inline a{display:inline-block;margin-top:6px}}
+
+
+/* Ntelecom reasons-to-choose section for five conversion landings. */
+.nt-why{width:min(1150px,calc(100% - 44px));margin:60px auto 24px;scroll-margin-top:94px;color:#24252a}
+.nt-eyebrow{font-size:12px!important;letter-spacing:.014em;font-weight:860;color:#c12d63!important;margin:0 0 10px!important}
+.nt-heading h2{font-size:clamp(26px,3.1vw,37px);font-weight:900;letter-spacing:-.058em;line-height:1.45;margin:0 0 11px}
+.nt-heading>p:last-child{font-size:15px;line-height:1.95;color:#666b71;margin:0;max-width:880px}
+.nt-offer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:25px}
+.nt-offer-grid:has(.nt-offer:nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+.nt-offer{display:flex;flex-direction:column;background:#fff;border:1px solid #e7e3eb;border-radius:15px;padding:23px;min-width:0;box-shadow:0 3px 13px #1f102406}
+.nt-offer:nth-child(2){border-color:#d5dfca;background:linear-gradient(175deg,#fcfff9,#fff)}
+.nt-offer .nt-reason{font-size:11px!important;font-weight:860!important;color:#c23a73!important;margin:0 0 13px!important}
+.nt-offer h3{font-size:21px;font-weight:900;line-height:1.44;letter-spacing:-.05em;margin:0 0 8px}
+.nt-plan-name{font-size:12px!important;color:#7b7580!important;margin:0 0 12px!important}
+.nt-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px;border-top:1px solid #eeebef;padding-top:15px}
+.nt-price strong{font-size:24px;letter-spacing:-.055em;font-weight:900;color:#e62563;white-space:nowrap}
+.nt-price span{font-size:10px;color:#95909a}
+.nt-spec{font-size:12px!important;font-weight:780!important;color:#34353c!important;line-height:1.75!important;margin:12px 0 7px!important}
+.nt-caution{flex:1;font-size:11px!important;line-height:1.75!important;color:#8a848e!important;margin:0 0 18px!important}
+.nt-offer>a{display:flex;align-items:center;justify-content:space-between;gap:9px;border-radius:9px;background:#26272d;color:#fff!important;padding:12px 13px;font-size:12px;font-weight:840}
+.nt-offer>a:hover{background:#db2464}
+.nt-helper{display:flex;align-items:center;justify-content:space-between;gap:25px;background:#f8f5f9;border:1px solid #eae2ed;border-radius:14px;padding:21px 25px;margin-top:17px}
+.nt-helper strong{font-size:15px;font-weight:850}
+.nt-helper p{font-size:12px!important;line-height:1.85!important;color:#77717e!important;margin:5px 0 0!important}
+.nt-helper a{border:1px solid #dbcdda;color:#a33065;padding:11px 16px;border-radius:8px;white-space:nowrap;font-size:12px;font-weight:820}
+.nt-helper a:hover{background:#fff}
+.nt-source{font-size:11px!important;line-height:1.8!important;color:#949099!important;margin:14px 0 0!important}
+.nt-source a{color:#775b95;text-decoration:underline;text-underline-offset:3px}
+.nt-special{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:#f1f7ff;border-radius:9px;padding:15px 19px;margin-top:13px}
+.nt-special strong{font-size:13px}.nt-special span{font-size:12px;color:#637281;flex:1}.nt-special a{font-size:12px;font-weight:830;color:#225c9c;white-space:nowrap}
+body[data-landing] .nt-why{width:100%;margin:25px 0 34px}
+body[data-landing] .nt-offer-grid{gap:13px}
+body[data-landing] .nt-heading>p:last-child{font-size:14px}
+body[data-landing] .nt-offer{padding:21px}
+body[data-landing] .nt-helper{margin-top:12px}
+@media(max-width:900px){.nt-offer-grid{grid-template-columns:1fr 1fr}.nt-offer-grid .nt-offer:last-child:nth-child(odd){grid-column:1/-1}.nt-heading>p:last-child{font-size:13px}}
+@media(max-width:670px){
+ .nt-why{width:calc(100% - 32px);margin:45px auto 24px}
+ .nt-heading h2{font-size:25px}
+ .nt-heading>p:last-child{font-size:13px}
+ .nt-offer-grid,.nt-offer-grid:has(.nt-offer:nth-child(2):last-child){grid-template-columns:1fr;gap:11px;margin-top:19px}
+ .nt-offer-grid .nt-offer:last-child:nth-child(odd){grid-column:auto}
+ .nt-offer{padding:19px}
+ .nt-offer h3{font-size:19px}
+ .nt-price strong{font-size:23px}
+ .nt-caution{margin-bottom:15px!important}
+ .nt-helper{display:block;padding:19px}
+ .nt-helper strong{font-size:14px}
+ .nt-helper p{font-size:11px!important}
+ .nt-helper a{display:inline-block;margin-top:12px}
+ body[data-landing] .nt-why{margin:25px 0}
+ .nt-special{display:block}
+ .nt-special span{display:block;margin:8px 0;font-size:11px}
+}

@@ -124,5 +124,21 @@ else{
 if(!fs.readFileSync("site/index.html","utf8").includes('href="price/zero-won/"'))errors.push("home does not discover 0-won landing");
 if(!fs.readFileSync("site/price/under-20000/index.html","utf8").includes('href="../zero-won/"'))errors.push("budget page does not discover 0-won landing");
 for(const asset of ["site/assets/zero-won.css","site/assets/zero-won.js"])if(!fs.existsSync(asset))errors.push(asset+" missing");
+const brandPages=[
+ ["site/price/zero-won/index.html",3],
+ ["site/price/under-20000/index.html",2],
+ ["site/number-transfer/index.html",2],
+ ["site/unlimited/index.html",2],
+ ["site/benefits/naverpay/index.html",2]
+];
+for(const [f,expectedCards] of brandPages){
+ const html=fs.readFileSync(f,"utf8");
+ if(!html.includes('id="why-ntelecom"'))errors.push(f+" missing Ntelecom reason section");
+ if(!html.includes('id="why-ntelecom-title"'))errors.push(f+" missing Ntelecom reasons heading");
+ if(!html.includes('data-nt-cta="consult"'))errors.push(f+" missing brand consultation CTA");
+ if((html.match(/class="nt-offer"/g)||[]).length!==expectedCards)errors.push(f+" expected "+expectedCards+" reason products");
+ if(!html.includes("59만모바일"))errors.push(f+" missing operator identity");
+ if(!html.includes("2026년"))errors.push(f+" missing evidence timeframe");
+}
 if(errors.length){console.error(errors.slice(0,40).join("\n"));throw Error(errors.length+" catalog QA errors");}
 console.log("STORE + HOME + 0-WON QA PASS: 21 pages; "+checked+" internal paths; unique canonical & title; 1 CSS; filters, comparison and mobile navigation present.");

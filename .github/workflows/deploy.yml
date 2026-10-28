@@ -34,6 +34,8 @@ jobs:
         run: node scripts/build-conversion-landings.mjs
       - name: Build ad-inspired zero-won comparison landing
         run: node scripts/build-zero-won-landing.mjs
+      - name: Add reasons to choose Ntelecom to five conversion pages
+        run: node scripts/add-nt-positioning.mjs
       - name: Check client scripts for syntax errors
         run: |
           node --check site/assets/catalog.js
@@ -47,6 +49,7 @@ jobs:
           node --check scripts/build-conversion-landings.mjs
           node --check site/assets/experiment-landings.js
           node --check scripts/build-zero-won-landing.mjs
+          node --check scripts/add-nt-positioning.mjs
           node --check site/assets/zero-won.js
       - name: Check site structure and links
         run: node scripts/validate-catalog.mjs
