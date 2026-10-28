@@ -53,6 +53,11 @@ jobs:
           node --check site/assets/zero-won.js
       - name: Check site structure and links
         run: node scripts/validate-catalog.mjs
+      - name: Publish and validate four contract and savings landings
+        run: |
+          node --check scripts/register-switch-landings.mjs
+          node --check site/assets/switch-landings.js
+          node scripts/register-switch-landings.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
