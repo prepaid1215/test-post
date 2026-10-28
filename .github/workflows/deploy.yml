@@ -58,6 +58,11 @@ jobs:
           node --check scripts/register-switch-landings.mjs
           node --check site/assets/switch-landings.js
           node scripts/register-switch-landings.mjs
+      - name: Register and verify five benefit and three work-phone landings
+        run: |
+          node --check scripts/register-segment-landings.mjs
+          node --check site/assets/segment-landings.js
+          node scripts/register-segment-landings.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
